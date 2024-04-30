@@ -1,25 +1,26 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type {Metadata} from "next";
+import {Inter} from "next/font/google";
 import "./globals.css";
-import Header from "../components/header";
+import Header from "@/components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-  title: "AWS",
-  description: "Cloud Hosting",
+    title: "AWS",
+    description: "Cloud Hosting",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-    <body className={inter.className}>
-    <Header />
-    {children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+        <body className={inter.className}>
+        <Header/>
+        {children}
+        </body>
+        </html>
+    );
 }
